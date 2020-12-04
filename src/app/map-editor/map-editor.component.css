@@ -1,0 +1,36 @@
+
+#map {
+    height: 300px;
+}
+
+@media screen and (min-height: 440px) and (min-width: 568px){
+    #map {
+        height: 450px;
+    }
+}
+
+@media screen and (min-height: 490px) and (min-width: 568px){
+    #map {
+        height: 300px;
+    }
+}
+
+@media screen and (min-height: 580px) and (min-width: 568px){
+    #map {
+        height: 480px;
+    }
+}
+
+button {
+    width: 100%;
+    background-color: rgb(0, 124, 248);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}

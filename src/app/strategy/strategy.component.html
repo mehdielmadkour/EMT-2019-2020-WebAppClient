@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+    <div class="row" style="padding-right: 15px;padding-left: 15px;">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">    
+            <div id="map" style="min-height: 150px;max-width: 100%"></div>
+        </div>
+        
+        <div class="col-12 col-sm-12 col-md-6  col-lg-6 col-xs-6">
+            <br>
+            <div id="dataTable"></div>
+            <br>
+            <button id="dashBoardCommand" class="btn btn-primary pull-right" (click)="switchDashBoardState()">Start</button>
+            <button id="speedUpCommand" class="btn btn-primary pull-right" (click)="speedUp()">SpeedUp</button>
+            <button id="slowDownCommand" class="btn btn-primary pull-right" (click)="slowDown()">SlowDown</button>
+        </div>
+    </div>
+</div>

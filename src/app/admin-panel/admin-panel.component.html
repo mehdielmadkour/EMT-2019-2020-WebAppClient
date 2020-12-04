@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="card-text" align="center" id="countSessions"></p>
+                </div>
+                <div class="card-footer text-muted text-center"><small>Nombre de Sessions</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" [style.display] = "selectActionDisplay()">
+        <div class="col-md-12 col-md-offset-3">
+            <form name="form" (ngSubmit)="fAction.form.valid && selectAction()" #fAction="ngForm" novalidate>
+                <div class="form-group">
+                    <!-- Choix de l'action -->
+                    <label for="actionSelector">Choix de l'action</label><br>
+                    <select id = "actionSelector" [(ngModel)]="action.value" [ngModelOptions]="{standalone: true}" required>
+                        <option value="update">Modifier un utilisateur</option>
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <!-- validation de la saisie -->
+                    <button class="btn btn-primary pull-right" [disabled]="!fAction.form.valid">Choisir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row" [style.display] = "selectLineDisplay()">
+        <div class="col-md-12 col-md-offset-3">
+            <form name="form" (ngSubmit)="fSelect.form.valid && selectUser()" #fSelect="ngForm" novalidate>
+                <div class="form-group">
+                    <!-- saisie de l'utilisateur -->
+                    <label for="userSelector">Nom de l'utilisateur</label><br>
+                    <select id = "userSelector" [(ngModel)]="updatedUser.name" [ngModelOptions]="{standalone: true}" required></select>
+                </div> 
+                <div class="form-group">
+                    <!-- validation de la saisie -->
+                    <button class="btn btn-primary pull-right" [disabled]="!fSelect.form.valid">Choisir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row" [style.display] = "updateLineDisplay()">
+        <div class="col-md-12 col-md-offset-3">
+            <form name="form" (ngSubmit)="fUpdate.form.valid && updateUserAccess()" #fUpdate="ngForm" novalidate>
+                <div class="form-group">
+                    <!-- saisie de l'accès -->
+                    <label for="accessSelector">Accès de l'utilisateur</label><br>
+                    <select id = "accessSelector" [(ngModel)]="updatedUser.access" [ngModelOptions]="{standalone: true}" required>
+                        <option value = "guest">Guest</option>
+                        <option value = "team">Team</option>
+                        <option value = "team">Pilot</option>
+                        <option value = "strategy">Strategy</option>
+                        <option value = "admin">Admin</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <!-- validation de la saisie -->
+                    <button class="btn btn-primary pull-right" [disabled]="!fUpdate.form.valid">Modifier</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12 col-md-offset-3">
+
+            <form name="form" (ngSubmit)="f.form.valid && execute()" #f="ngForm" novalidate>
+                <div class="form-group">
+                    <!-- saisie de la requete -->
+                    <textarea type="text" class="form-control" name="sql" id="sql" [(ngModel)]="request.command" #sql="ngModel" placeholder="requête SQL" required ></textarea>
+                </div> 
+                <div class="form-group">
+                    <!-- validation de la saisie -->
+                    <button class="btn btn-primary pull-right" [disabled]="!f.form.valid">Valider</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

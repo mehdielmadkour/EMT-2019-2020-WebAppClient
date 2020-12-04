@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <form name="form" (ngSubmit)="f.form.valid && send()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <input type="text" class="form-control" name="carData" id="carData" [(ngModel)]="carData.data" #username="ngModel" placeholder="data" required />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary pull-right" [disabled]="!f.form.valid">Valider</button>
+        </div>
+    </form>
+</div>

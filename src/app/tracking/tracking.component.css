@@ -1,0 +1,47 @@
+#logo {
+    width: 55%;
+}
+
+@media screen and (min-height: 440px) and (min-width: 568px){
+    #logo {
+        width: 65%;
+    }
+}
+
+@media screen and (min-height: 490px) and (min-width: 568px){
+    #logo {
+        width: 75%;
+    }
+}
+
+@media screen and (min-height: 580px) and (min-width: 568px){
+    #logo {
+        width: 85%;
+    }
+}
+
+#map {
+    height: 200px;
+}
+
+@media screen and (min-height: 440px) and (min-width: 568px){
+    #map {
+        height: 250px;
+    }
+}
+
+@media screen and (min-height: 490px) and (min-width: 568px){
+    #map {
+        height: 300px;
+    }
+}
+
+@media screen and (min-height: 580px) and (min-width: 568px){
+    #map {
+        height: 480px;
+    }
+}
+
+mat-grid-tile-header {
+    text-align: center;
+}

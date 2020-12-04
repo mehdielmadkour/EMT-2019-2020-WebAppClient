@@ -1,0 +1,22 @@
+
+#map {
+    height: 300px;
+}
+
+@media screen and (min-height: 440px) and (min-width: 568px){
+    #map {
+        height: 450px;
+    }
+}
+
+@media screen and (min-height: 490px) and (min-width: 568px){
+    #map {
+        height: 300px;
+    }
+}
+
+@media screen and (min-height: 580px) and (min-width: 568px){
+    #map {
+        height: 480px;
+    }
+}

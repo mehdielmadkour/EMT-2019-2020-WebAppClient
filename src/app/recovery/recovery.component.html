@@ -1,0 +1,26 @@
+<div class="container" >
+
+    <div align = "center">
+  
+      <!-- photo EMT -->
+      <img src="assets/images/logo_emt.png"/>
+  
+    </div>
+  
+  
+    <div class="col-md-12 col-md-offset-3">
+  
+      <div class="login-wrapper" align="center">
+  
+        <form name="form" (ngSubmit)="f.form.valid && recover()" #f="ngForm" novalidate>
+          <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <input type="text" class="form-control" name="mail" id="mail" [(ngModel)]="user.mail" #username="ngModel" placeholder="adresse mail" required />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary pull-right" [disabled]="!f.form.valid">Récupérer mon mot de passe</button>
+          </div>
+        </form>
+      </div>
+  
+    </div>
+  </div>
